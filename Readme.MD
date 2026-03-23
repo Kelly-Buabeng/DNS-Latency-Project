@@ -1,4 +1,4 @@
-# DCIT 417 — DNS Latency and Its Impact on Web Page Load Time
+# DNS Latency and Its Impact on Web Page Load Time
 ## Project README & Execution Guide
 
 ---
