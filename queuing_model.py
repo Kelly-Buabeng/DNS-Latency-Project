@@ -154,8 +154,13 @@ def run_analytical_models(summary_csv: Optional[str] = None) -> list[MM1Result]:
             # summary_stats.csv groups by (resolver, hostname) — take overall mean
             r = row.get("resolver", row.get("resolver_name", ""))
             v = row.get("dns_mean", row.get("dns_time_ms_mean", None))
-            if r and v:
-                means.setdefault(r, []).append(float(v))
+            if r and pd.notna(v):
+                try:
+                    vf = float(v)
+                    if vf > 0:
+                        means.setdefault(r, []).append(vf)
+                except (ValueError, TypeError):
+                    pass
         resolver_means = {r: np.mean(vs) for r, vs in means.items()}
         print(f"Loaded empirical DNS means from {summary_csv}: {resolver_means}")
     else:

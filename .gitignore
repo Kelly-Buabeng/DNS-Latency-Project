@@ -1,0 +1,15 @@
+# Security: Ignore CSV files containing IP addresses
+*.csv
+**/*.csv
+
+# Generated results and plots
+results/
+plots/
+
+# Python cache and environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.DS_Store
