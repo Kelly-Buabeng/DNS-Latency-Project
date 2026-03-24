@@ -1,4 +1,4 @@
-# Security: Ignore CSV files containing IP addresses
+# For security reasons: Ignore CSV files containing the IP addresses used in creating this model
 *.csv
 **/*.csv
 
