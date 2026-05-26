@@ -1,4 +1,47 @@
 # DNS Latency and Its Impact on Web Page Load Time
+
+## DNS Latency Project
+
+## Project Overview
+
+**Description:**  
+• Metrics: DNS lookup time, TCP handshake time, page load estimate  
+• Model: component-wise delay model (DNS + TCP + transfer)  
+• Outcome: compare public resolvers vs ISP vs campus.
+
+---
+
+## What Does This Project Do?
+
+### For Non-IT-Inclined Persons
+
+This project measures how quickly you can access websites on the internet. Specifically, it looks at:
+
+- **How long it takes to find the website address** (like finding a phone number in a directory).
+- **How long it takes for your computer to connect to the website** (like shaking hands before you talk).
+- **How long it takes for the webpage to actually open** after that.
+
+It compares the speed when you use different helpers to connect to websites:
+- Your home or office internet provider (ISP)
+- Public helpers like Google or Cloudflare (public DNS resolvers)
+- Networks at school or on campus
+
+The goal is to show which method is fastest and most reliable for loading websites.
+
+---
+
+### For IT-Inclined Persons
+
+This repository implements a latency measurement and modeling suite. It focuses on:
+
+- **DNS Lookup Time:** Measuring the duration to resolve domain names via various resolvers: public (e.g., Google DNS, Cloudflare), ISP-provided, and campus DNS servers.
+- **TCP Handshake Time:** Recording the time to establish TCP connections after DNS resolution.
+- **Page Load Estimation:** Aggregating DNS, TCP, and content transfer times for end-to-end webpage load estimation.
+
+**Outcome:**  
+The tool enables comparison of network latency and responsiveness across different DNS resolver scenarios (public, ISP, campus). The empirical results aid in identifying which DNS resolver setup provides the lowest latency and best browsing experience.
+
+---
 ## Project README & Execution Guide
 
 ---
